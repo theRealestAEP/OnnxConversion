@@ -3,8 +3,13 @@ import onnxruntime as ort
 import numpy as np
 import torch
 
+
 # Load the models
 model = YOLO("yolo11n.pt")
+
+model.export(format="onnx", opset=12, simplify=True, dynamic=True, half=True)
+
+
 onnx_model = YOLO("yolo11n.onnx")
 
 # Run inference
