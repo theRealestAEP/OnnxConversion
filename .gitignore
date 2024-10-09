@@ -1,0 +1,8 @@
+# Ignore PyTorch model files
+*.pt
+
+# Ignore ONNX model files
+*.onnx
+
+Tests
+yolo_env
